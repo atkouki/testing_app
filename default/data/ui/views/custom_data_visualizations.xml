@@ -1,0 +1,12 @@
+<dashboard  version="1.1">
+  <label>Custom Data Visualizations</label>
+  <row>
+    <panel>
+      <html>
+        <b>
+          <a taret="_blank" href="https://splunkbase.splunk.com/app/3118/">Treemap</a>
+        </b> custom visualization
+      </html>
+    </panel>
+  </row>
+</dashboard>

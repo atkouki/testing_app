@@ -1,0 +1,39 @@
+<form  version="1.1" script="table_data_bar.js" stylesheet="table_data_bar.css">
+  <label>Custom style</label>
+  <fieldset submitButton="false"></fieldset>
+  <row>
+    <panel>
+      <chart>
+        <title>Top Sourcetypes</title>
+        <search>
+          <query>index=_internal | top sourcetype</query>
+          <earliest>-60m@m</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.backgroundColor">#475565</option>
+        <option name="charting.foregroundColor">#EBF5FF</option>
+        <option name="charting.fontColor">#99CCFF</option>
+        <option name="charting.seriesColors">[0xEBF0F5,0xC2D1E0,0x99B2CC,0x7094B8,0x4775A3,0x2E5C8A,0x24476B,0x1A334C,0x0F1F2E,0x050A0F]</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table id="table1">
+        <title>Top Sourcetypes (Last 24 hours)</title>
+        <search>
+          <query>index=_internal | top limit=100 sourcetype source | fields - source</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="count">10</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">cell</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">true</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+  </row>
+</form>

@@ -1,0 +1,20 @@
+[default]
+[]
+access = read : [ * ], write : [ admin, power ]
+
+[eventtypes]
+export = system
+
+[lookups]
+export = system
+
+[props]
+export = system
+
+[transforms]
+export = system
+
+[viewstates]
+access = read : [ * ], write : [ * ]
+export = system
+
